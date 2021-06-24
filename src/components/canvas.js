@@ -26,7 +26,7 @@ return (
 {/* border: 10px solid rgb(177, 51, 51);  */}
 <div style={{backgroundImage:`url(${selectedOption})`,border:`${borderColor}`}} className="slid">  
  
-<h1 style={{  fontWeight: `700`,width: `570px`,wordWrap: `break-word`,transform: `translate(-50%,-50%)`,position: `absolute`,top: `35%`, left: `50%`,fontFamily: `'Inter', sans-serif`, textAlign:"center",color:"white"}}>{userInput}</h1> 
+<h1 style={{  fontWeight: `700`,width: `570px`,wordWrap: `break-word`,transform: `translate(-50%,-50%)`,position: `absolute`,top: `46%`, left: `50%`,fontFamily: `'Inter', sans-serif`, textAlign:"center",color:"white"}}>{userInput}</h1> 
 </div>  
 </Container>     
 </div>
