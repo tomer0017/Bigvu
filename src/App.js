@@ -45,14 +45,14 @@ function App() {
     </Nav>
   </Navbar>
         <Switch>
-          <Route path="/about">
+          <Route path="/white">
           <div className="buttons">
             <Myselector   setselectedOption={setselectedOption}   />
             <Mytext  setuserInput={setuserInput} />
             </div>
             <Canvas  userInput={userInput}  selectedOption={selectedOption} borderColor={"20px solid rgb(255, 255, 255)"}/>
           </Route>
-          <Route path="/users">
+          <Route path="/blue">
             <div className="buttons">
             <Myselector   setselectedOption={setselectedOption}   />
             <Mytext setuserInput={setuserInput} />
