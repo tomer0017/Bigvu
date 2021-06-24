@@ -21,7 +21,7 @@ function App() {
  
   const [borderColor, setborderColor] = useState();
   const [userInput,setuserInput]=useState("");
-  const [selectedOption,setselectedOption]=useState("בחר הזאנר המועדף עליך...");
+  const [selectedOption,setselectedOption]=useState("https://bigvu-interviews-assets.s3.amazonaws.com/images/Daisi.png");
 
     
       const handleAddrTypeChange = (e) => setselectedOption(e.target.value)
@@ -33,9 +33,9 @@ function App() {
       <Router>
       <div >
     
-        <Navbar bg="primary" variant="dark">
+        <Navbar bg="primary" variant="dark" style={{ background:`linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)`}} >
     {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
-    <Nav style={{margin:`auto`}} className="mr-auto">
+    <Nav style={{margin:`auto`,    fontSize: `25px`,fontWeight: `700`}} className="mr-auto">
     {/* <Link to="/">    <Nav.Link to="/" href="#home">Home</Nav.Link></Link> */}
    
       <Link to="/white">  <Nav.Link to="/about" href="#features">White</Nav.Link></Link>
@@ -70,7 +70,7 @@ function App() {
 }
 
 function Home() {
-  return "בחר מסגרת";
+  return <h1>please choose frame color</h1>;
 }
 
 

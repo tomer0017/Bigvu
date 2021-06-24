@@ -13,7 +13,7 @@
 
 .buttons{
   display:inline-flex;
-  margin: 60px;
+  margin: 20px;
 }
 
 
@@ -27,7 +27,7 @@
   height: 360px;
   background-size:cover;
   margin: auto;
-  display: table-cell;
+  /* display: table-cell; */
   vertical-align: middle;
  
 }
