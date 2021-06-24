@@ -1,5 +1,40 @@
 .App {
   text-align: center;
+  background-color: rgb(236 236 236);
+  height: 100vh;
+}
+
+
+.select_{
+  width: 139%;
+  margin-left: 59px;
+  
+}
+
+.buttons{
+  display:inline-flex;
+  margin: 60px;
+}
+
+
+.Canvas {
+  width: 640px;
+  height: 360px;
+}
+.slid{
+  text-align: center;
+  width: 640px;
+  height: 360px;
+  background-size:cover;
+  margin: auto;
+  display: table-cell;
+  vertical-align: middle;
+ 
+}
+
+.TextArea {
+  text-align: center;
+  background-color: rgb(44, 144, 238);
 }
 
 .App-logo {
@@ -26,6 +61,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.colorNav{
+  margin: auto;
 }
 
 @keyframes App-logo-spin {
