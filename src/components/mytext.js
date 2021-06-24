@@ -56,7 +56,7 @@ return (
 
     <input
         style={{ width:` 200px`, height: `57px`, borderRadius:`12px`,backgroundColor:`rgb(206 206 206)`}}
-        placeholder="Search Marvel Comics"
+        placeholder="display text"
         onChange={e => setuserInput(e.target.value)}
       />
 
