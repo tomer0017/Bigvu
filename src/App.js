@@ -38,8 +38,8 @@ function App() {
     <Nav style={{margin:`auto`}} className="mr-auto">
     {/* <Link to="/">    <Nav.Link to="/" href="#home">Home</Nav.Link></Link> */}
    
-      <Link to="/about">  <Nav.Link to="/about" href="#features">White</Nav.Link></Link>
-      <Link to="/users">  <Nav.Link  href="#pricing">Blue</Nav.Link></Link>
+      <Link to="/white">  <Nav.Link to="/about" href="#features">White</Nav.Link></Link>
+      <Link to="/blue">  <Nav.Link  href="#pricing">Blue</Nav.Link></Link>
 
  
     </Nav>
