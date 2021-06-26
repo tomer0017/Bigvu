@@ -1,6 +1,7 @@
 import { Button,Container,Row,Col,Nav,Form,Dropdown,NavDropdown,FormControl,Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Canvas from './components/canvas.js';
+import Canvas23 from './components/canvas23.js';
 import Myselector from './components/myselector.js';
 import Mytext from './components/mytext.js';
 
@@ -39,16 +40,44 @@ function App() {
   }
   
   function Blue_init() {
-    setclear_flag(false)
+    
+    setclear_flag("blue")
     return <br/> ;
   }
   
   function White_init() {
    
-    setclear_flag("")
+    setclear_flag("white")
     
     return <br/> ;
   }
+
+  function Canvas23_init() {
+   
+    setclear_flag("canvas23")
+    
+    return <br/> ;
+  }
+  
+
+    
+  // function New_mode() {
+   
+  //   if (clear_flag==""){
+
+  //    setclear_flag(false) 
+  //   }
+
+  //   else {
+  //     setclear_flag("") 
+  //   }
+    
+    
+  //   return <br/> ;
+  // }
+
+
+
       // fetch(
       //   "https://bigvu-interviews-assets.s3.amazonaws.com/presenters.json",
       //   { mode: 'cors' },
@@ -80,7 +109,7 @@ function App() {
    
       <Link to="/white">  <Nav.Link to="/about" href="#features">White</Nav.Link></Link>
       <Link to="/blue">  <Nav.Link  href="#pricing">Blue</Nav.Link></Link>
-
+      <Link to="/2_3">  <Nav.Link  href="#2/3mode">2/3</Nav.Link></Link>
  
     </Nav>
   </Navbar>
@@ -112,6 +141,22 @@ function App() {
          } 
          
          </Route>
+
+         <Route  path="/2_3"  >
+         
+         <Canvas23_init/> 
+       
+           <div className="buttons">
+            
+           <Myselector  clear_flag={clear_flag} setselectedOption={setselectedOption}   />
+           <Mytext userInput={userInput} clear_flag={clear_flag} setuserInput={setuserInput} />
+           </div>
+       {selectedOption &&  
+       <Canvas23  userInput={userInput}  selectedOption={selectedOption} borderColor={"20px solid rgb(44, 144, 238)"}/>
+        } 
+        
+        </Route>
+
           <Route path="/">
             <Home />
           </Route>

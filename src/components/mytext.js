@@ -30,7 +30,7 @@ export default function Mytext(props) {
 
 
 
-
+// console.log(userInput)
 return (
 
     <div>
@@ -40,7 +40,7 @@ return (
         
         style={{ width:` 200px`, height: `57px`, borderRadius:`12px`,backgroundColor:`rgb(206 206 206)`}}
         placeholder="display text"
-        // value={userInput}
+      
         onChange={textChanging}
       />
 

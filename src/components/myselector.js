@@ -36,6 +36,7 @@ return (
     <div>
     
 < select 
+// defaultValue={value} 
 style={{ marginRight: `85px`,width:` 200px`, height: `57px`,  borderRadius:`12px`,backgroundColor:`rgb(206 206 206)`}}
     
       onChange={e => handleAddrTypeChange(e)}
