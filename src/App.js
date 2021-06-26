@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Canvas from './components/canvas.js';
 import Myselector from './components/myselector.js';
 import Mytext from './components/mytext.js';
-import Debounce from './components/debounce.js';
+
 import { useState,useEffect } from 'react';
 import './App.css';
 import Select from 'react-select';
@@ -21,10 +21,50 @@ function App() {
  
   const [borderColor, setborderColor] = useState();
   const [userInput,setuserInput]=useState("");
-  const [selectedOption,setselectedOption]=useState("https://bigvu-interviews-assets.s3.amazonaws.com/images/Daisi.png");
+  const [selectedOption,setselectedOption]=useState(""); 
+  const [clear_flag,setclear_flag]=useState("");
 
     
-      const handleAddrTypeChange = (e) => setselectedOption(e.target.value)
+  const handleAddrTypeChange = (e) => setselectedOption(e.target.value)
+
+ 
+  // useEffect(() => {
+   
+  //   setselectedOption('');
+  // }, [path]);
+
+
+  function Home() {
+    return <h1>please choose frame color</h1>;
+  }
+  
+  function Blue_init() {
+    setclear_flag(false)
+    return <br/> ;
+  }
+  
+  function White_init() {
+   
+    setclear_flag("")
+    
+    return <br/> ;
+  }
+      // fetch(
+      //   "https://bigvu-interviews-assets.s3.amazonaws.com/presenters.json",
+      //   { mode: 'cors' },
+      //   {
+      //     method: "GET",
+      //     headers: {
+      //       "access-control-allow-origin" : "*",
+      //       "Content-type": "application/json; charset=UTF-8"
+      //     },
+      //   }
+      // ).then(response => response.json())
+      // .then(data => {
+      //   console.log('Success:', data);
+
+      // })
+ 
 
   return (
 
@@ -45,20 +85,33 @@ function App() {
     </Nav>
   </Navbar>
         <Switch>
-          <Route path="/white">
+          <Route  path="/white">
+     
+            <White_init/>
+           
           <div className="buttons">
-            <Myselector   setselectedOption={setselectedOption}   />
-            <Mytext  setuserInput={setuserInput} />
+
+            <Myselector  clear_flag={clear_flag} setselectedOption={setselectedOption}   />
+            <Mytext userInput={userInput} clear_flag={clear_flag} setuserInput={setuserInput} />
             </div>
+            {selectedOption && 
             <Canvas  userInput={userInput}  selectedOption={selectedOption} borderColor={"20px solid rgb(255, 255, 255)"}/>
+            }
           </Route>
-          <Route path="/blue">
+          <Route  path="/blue"  >
+         
+          <Blue_init/> 
+        
             <div className="buttons">
-            <Myselector   setselectedOption={setselectedOption}   />
-            <Mytext setuserInput={setuserInput} />
+             
+            <Myselector  clear_flag={clear_flag} setselectedOption={setselectedOption}   />
+            <Mytext userInput={userInput} clear_flag={clear_flag} setuserInput={setuserInput} />
             </div>
-            <Canvas  userInput={userInput}  selectedOption={selectedOption} borderColor={"20px solid rgb(44, 144, 238)"}/>
-          </Route>
+        {selectedOption &&  
+        <Canvas  userInput={userInput}  selectedOption={selectedOption} borderColor={"20px solid rgb(44, 144, 238)"}/>
+         } 
+         
+         </Route>
           <Route path="/">
             <Home />
           </Route>
@@ -69,9 +122,7 @@ function App() {
   );
 }
 
-function Home() {
-  return <h1>please choose frame color</h1>;
-}
+
 
 
 export default App;

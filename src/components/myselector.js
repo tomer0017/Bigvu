@@ -8,7 +8,8 @@ import { Button,Container,Row,Col,Nav,Form,NavDropdown,FormControl,Navbar } from
 
 export default function Myselector(props) {
 
-    const{setselectedOption}=props
+    const{setselectedOption,clear_flag}=props
+    
     const pics = [
 
         {"name": "Daisi", "value": "https://bigvu-interviews-assets.s3.amazonaws.com/images/Daisi.png"},
@@ -20,6 +21,14 @@ export default function Myselector(props) {
         {"name": "Eli", "value": "https://bigvu-interviews-assets.s3.amazonaws.com/images/Eli.png"}
     ]
 
+  useEffect(() => {
+   
+    setselectedOption('');
+  }, [clear_flag]);
+
+
+
+
 const pic = pics.map(pic => pic)  
 const handleAddrTypeChange = (e) => setselectedOption(e.target.value)    
 return (
@@ -28,11 +37,14 @@ return (
     
 < select 
 style={{ marginRight: `85px`,width:` 200px`, height: `57px`,  borderRadius:`12px`,backgroundColor:`rgb(206 206 206)`}}
-
+    
       onChange={e => handleAddrTypeChange(e)}
       className="browser-default custom-select" >
+         {/* <option value={""}>{"select photo"}</option>) */}
       {
-        pics.map((pic) => <option value={pic.value}>{pic.name}</option>)
+        pics.map((pic) => 
+       
+        <option value={pic.value}>{pic.name}</option>)
       }
     </select >
     </div>
