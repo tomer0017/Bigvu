@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Bigvu/static/css/main.bb3c7f27.chunk.css",
+    "main.js": "/Bigvu/static/js/main.c5653922.chunk.js",
+    "main.js.map": "/Bigvu/static/js/main.c5653922.chunk.js.map",
+    "runtime-main.js": "/Bigvu/static/js/runtime-main.a3e79521.js",
+    "runtime-main.js.map": "/Bigvu/static/js/runtime-main.a3e79521.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/Bigvu/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.9c30041d.chunk.js": "/Bigvu/static/js/2.9c30041d.chunk.js",
+    "static/js/2.9c30041d.chunk.js.map": "/Bigvu/static/js/2.9c30041d.chunk.js.map",
+    "static/js/3.3d97ad54.chunk.js": "/Bigvu/static/js/3.3d97ad54.chunk.js",
+    "static/js/3.3d97ad54.chunk.js.map": "/Bigvu/static/js/3.3d97ad54.chunk.js.map",
+    "index.html": "/Bigvu/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/Bigvu/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.bb3c7f27.chunk.css.map": "/Bigvu/static/css/main.bb3c7f27.chunk.css.map",
+    "static/js/2.9c30041d.chunk.js.LICENSE.txt": "/Bigvu/static/js/2.9c30041d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a3e79521.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.9c30041d.chunk.js",
+    "static/css/main.bb3c7f27.chunk.css",
+    "static/js/main.c5653922.chunk.js"
+  ]
+}
