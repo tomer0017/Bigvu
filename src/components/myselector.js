@@ -41,7 +41,7 @@ style={{ marginRight: `85px`,width:` 200px`, height: `57px`,  borderRadius:`12px
     
       onChange={e => handleAddrTypeChange(e)}
       className="browser-default custom-select" >
-         {/* <option value={""}>{"select photo"}</option>) */}
+         <option value={""}>{"select photo"}</option>)
       {
         pics.map((pic) => 
        
